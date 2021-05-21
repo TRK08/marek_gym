@@ -26,11 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      320: {
+      290: {
         slidesPerView: 1,
         navigation: false,
       },
-
       767: {
         slidesPerView: 2,
         navigation: true,
@@ -41,4 +40,80 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+
+  // MODAL WINDOW
+  const modal = document.querySelector('.modal'),
+        btns = document.querySelectorAll('.plans-item-btn');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modal.classList.toggle('active');
+      document.body.style.overflow = 'hidden';
+    })  
+  })
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target.getAttribute('data-close') == '') {
+      modal.classList.toggle('active');
+      document.body.style.overflow = 'auto';
+    }
+  });  
+
+
+  // FORM
+  // const form = document.querySelectorAll('form');
+
+  function formValidate(formClass, btnClass, inputs) {
+    const form = document.querySelector(formClass),
+          btn = document.querySelector(btnClass),
+          inputsArr = document.querySelectorAll(inputs);
+
+    form.addEventListener('submit', () => {
+      form.reset();
+    })
+
+    btn.disabled = true;
+    btn.style.opacity = 0.7;
+
+    for (let i = 0; i < inputsArr.length; i++) {
+      inputsArr[i].addEventListener('input', () => {
+        if (!inputsArr[i].value.length) {
+          inputsArr[i].style.borderBottom = '2px solid red';
+          inputsArr[i].required = true;
+        }
+        else {
+          if(inputsArr[i].classList.contains('footer-form-input')) {
+            inputsArr[i].style.borderBottom = '1px solid #fff';
+            inputsArr[i].required = false;
+          }
+          else {
+            inputsArr[i].style.borderBottom = '2px solid rgba(0, 46, 136, 0.6)';
+            inputsArr[i].required = false;
+          }
+          
+          
+          
+        }
+        if(!inputsArr[0].required && !inputsArr[1].required) {
+          btn.disabled = false;
+          btn.style.opacity = 1;
+        }
+        else {
+          btn.disabled = true;
+          btn.style.opacity = .7;
+        }
+      })
+  }
+}
+
+    formValidate('.footer-form', '.footer-form-btn', '.footer-form-input');
+    formValidate('.consultation-form', '.consultation-form-btn', '.consultation-form-input');
+    formValidate('.modal-form', '.modal-form-btn', '.modal-form-input');
+
+
+
+  
+  
+
 });
