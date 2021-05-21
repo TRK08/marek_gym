@@ -228,6 +228,7 @@ form button {
 }
 
 .hero-title span{
+  display: inline-block;
   background: linear-gradient(90deg, #AE922C 0%, #C5AA66 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -252,6 +253,13 @@ form button {
   background-color: #fff;
   box-shadow: 13px 15px 20px -6px #1A5FE4;
   border-radius: 20px;
+  transition: all .3s ease-out;
+}
+
+.hero-btn:hover {
+  color: #ae922c;
+  box-shadow: 13px 15px 20px -6px #ae922c;
+  transition: all .3s ease-in;
 }
 
 /* RESULTS */
@@ -367,8 +375,23 @@ form button {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  margin-top: -45px;
   z-index: 2;
+}
+
+.neon-anim {
+  animation: neon 2s ease-in;
+}
+
+@keyframes neon {
+  0% {
+    box-shadow: 2px -3px 11px 8px #002E88;
+  }
+  50% {
+    box-shadow: 2px -3px 11px 8px #AE922C;
+  }
+  100% {
+    box-shadow: 2px -3px 11px 8px #002E88;
+  }
 }
 
 .about-text {
@@ -423,6 +446,11 @@ form button {
   text-align: center;
   width: 100%;
 }
+
+.plans-item:last-child {
+  margin-right: 0;
+}
+
 .plans-item__wrap {
   background: linear-gradient(90deg, #00C6FB 0%, #002E88 100%);
   border-radius: 20px;
@@ -482,11 +510,24 @@ form button {
   line-height: 30px;
   text-transform: uppercase;
   /* margin-bottom: 30px; */
+  transition: all .3s ease-out;
 }
 
 .plans-item:nth-child(even) .plans-item-btn{
-  color: #AE922C!important;
+  color: #AE922C;
   box-shadow: 13px 15px 20px -6px #AE922C;
+}
+
+.plans-item:nth-child(even) .plans-item-btn:hover{
+  color: #002E88;
+  box-shadow: 13px 15px 20px -6px #1A5FE4;
+  transition: all .3s ease-in;
+}
+
+.plans-item:nth-child(odd) .plans-item-btn:hover{
+  color: #AE922C;
+  box-shadow: 13px 15px 20px -6px #AE922C;
+  transition: all .3s ease-in;
 }
 
 
@@ -608,6 +649,13 @@ form button {
 
 .footer-menu-item:last-child {
   margin-right: 0;
+}
+
+.footer-menu-item:hover a,
+.footer-social-mail:hover {
+  background: linear-gradient(90deg, #AE922C 0%, #C5AA66 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer-form {
@@ -847,6 +895,10 @@ form button {
     border-radius: 0;
     padding: 0;
     overflow: auto;
+  }
+
+  .neon-anim {
+    animation: none;
   }
 
   .img__wrap {

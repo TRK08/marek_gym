@@ -113,7 +113,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+  let title = anime({
+    targets: '.results-title',
+    translateX: [-100, 0],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    autoplay: false
+  });
+
+  let subTitle = anime({
+    targets: '.results-subtitle',
+    translateX: [-100, 0],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    autoplay: false
+  });
   
+
+  window.addEventListener('scroll', (e) => {
+    title.seek(window.pageYOffset * 2.2);
+  })
+  window.addEventListener('scroll', (e) => {
+    subTitle.seek(window.pageYOffset * 1.7);
+  })
+
   
 
 });

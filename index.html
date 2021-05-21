@@ -12,9 +12,9 @@
 </head>
 <body>
 
-  <header class="header">
+  <header class="header ">
     <div class="container">
-      <div class="header__wrap">
+      <div class="header__wrap wow animate__animated animate__fadeIn">
         <div class="header-email">
           <a href="mailto:markus@trainer.com">markus@trainer.com</a>
         </div>
@@ -69,9 +69,9 @@
 
   <section class="hero">
     <div class="container">
-      <h1 class="hero-title"><span>MAKE THE <br> INVESTMENT </span> IN <br> YOUR HEALTH</h1>
-      <p class="hero-subtitle">Changing your lifestyle into your fitness goals</p>
-      <button class="hero-btn">Start your change now!</button>
+      <h1 class="hero-title wow animate__animated animate__slideInLeft"><span>MAKE THE <br> INVESTMENT </span> IN <br> YOUR HEALTH</h1>
+      <p class="hero-subtitle wow animate__animated animate__fadeIn animate__delay-1s">Changing your lifestyle into your fitness goals</p>
+      <button class="hero-btn wow animate__animated animate__fadeIn animate__delay-1s">Start your change now!</button>
     </div>
   </section>
 
@@ -79,8 +79,8 @@
     <div class="container">
       <h2 class="results-title">REAL CHANGE</h2>
       <h3 class="results-subtitle">REAL RESULTS</h3>
-    </div>
-    <div class="results-slider">
+    
+    <div class="results-slider wow animate__animated animate__fadeIn">
       <!-- Slider main container -->
       <div class="swiper-container">
         <!-- If we need navigation buttons -->
@@ -109,18 +109,19 @@
         
       </div>
     </div>
+  </div>
   </section>
 
   <section class="about" id="about">
     <div class="container">
-      <h2 class="about-title">ABOUT ME</h2>
-      <div class="about__wrap">
-        <div class="about-text">
+      <h2 class="about-title wow animate__animated animate__fadeIn">ABOUT ME</h2>
+      <div class="about__wrap neon-anim wow">
+        <div class="about-text wow animate__animated animate__fadeIn">
           <p>Hey! My name is Markus and I am a fitness trainer. My path to a beautiful body began in 0000. I had to try a lot of techniques, spend tons of time in the gym, and work out my nutritional system.</p>
           <p>Now I am ready to share with you everything that I know and can do.</p>
           <p>I will help you make the body of your dreams!</p>  
         </div>
-        <div class="img__wrap">
+        <div class="img__wrap wow animate__animated animate__fadeIn">
           <img class="about-img" src="./img/about-photo.png" alt="photo">
         </div>
       </div>
@@ -129,9 +130,9 @@
 
   <section class="plans" id="programs">
     <div class="container">
-      <h2 class="plans-title">READY TO START YOUR CHANGE?</h2>
-      <p class="plans-descr">My programs have been designed to redefine your health and fitness journey, making it a fun yet challenging journey! I know every single body is different, no matter what your goal is there will be a plan that works for you!</p>
-      <div class="plans-box">
+      <h2 class="plans-title wow animate__animated animate__fadeIn">READY TO START YOUR CHANGE?</h2>
+      <p class="plans-descr wow animate__animated animate__fadeIn">My programs have been designed to redefine your health and fitness journey, making it a fun yet challenging journey! I know every single body is different, no matter what your goal is there will be a plan that works for you!</p>
+      <div class="plans-box wow animate__animated animate__fadeInUp">
         <div class="plans-item">
           <div class="plans-item__wrap">
             <h4 class="plans-item-title">meal plan</h4>
@@ -190,12 +191,12 @@
 
   <section class="consultation" id="consultation">
     <div class="container">
-      <div class="consultation-wrap">
-        <h2 class="consultation-title">Are you looking for <br> <span>In-Person Training?</span></h2>
-        <div class="img__wrap">
+      <div class="consultation-wrap wow neon-anim">
+        <h2 class="consultation-title wow animate__animated animate__fadeIn">Are you looking for <br> <span>In-Person Training?</span></h2>
+        <div class="img__wrap wow animate__animated animate__fadeIn">
           <img src="./img/consultation-photo.png" alt="" class="consultation-img">
         </div>
-        <div class="consultation-form__wrap">
+        <div class="consultation-form__wrap wow animate__animated animate__fadeIn">
           <h3 class="consultation-form-title">Schedule a <span>free consultation</span> with me!</h3>
           <form class="consultation-form" action="">
             <input class="consultation-form-input" type="text" placeholder="Name:" required>
@@ -210,7 +211,7 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-box">
+      <div class="footer-box wow animate__animated animate__fadeIn">
         <div class="footer-social">
           <a class="footer-social-mail" href="mailto:markus@trainer.com">markus@trainer.com</a>
           <div class="footer-social-link">
@@ -243,7 +244,7 @@
           </form>
         </div>
       </div>
-      <div class="footer-copyright">
+      <div class="footer-copyright wow animate__animated animate__fadeIn">
         <p><img src="./img/copyright.svg" alt="Copyright">All rights reserved. Privacy Policy</p>
       </div>
     </div>
@@ -267,6 +268,8 @@
   <script src="./js/wow.min.js"></script>
   <!-- link swiper.min.js -->
   <script src="./js/swiper.min.js"></script>
+  <!-- link anime.js -->
+  <script src="./js/anime.min.js"></script>
   <!-- link script.js -->
   <script src="./js/script.js"></script>
 </body>
