@@ -45,11 +45,6 @@
             <li class="menu-item">
               <a href="#about"> About me </a>
             </li>
-            <li class="menu-item">
-              <a href="#"> 
-                <img src="./img/cart.svg" alt="cart">
-              </a>
-            </li>
           </ul>
         </nav>
         <div class="header-burger">
@@ -81,7 +76,7 @@
     <div class="container">
       <h1 class="hero-title"><span>MAKE THE INVESTMENT </span> IN <br> YOUR HEALTH</h1>
       <p class="hero-subtitle">Changing your lifestyle <br> into your fitness goals</p>
-      <button class="hero-btn wow animate__animated animate__fadeIn animate__delay-1s">Start your change now!</button>
+      <a href="#programs" class="hero-btn wow animate__animated animate__fadeIn animate__delay-1s">Start your change now!</a>
     </div>
   </section>
 
@@ -145,7 +140,7 @@
       <p class="plans-descr wow animate__animated animate__fadeIn"><span>My programs have been designed to redefine your health and fitness journey, making it a fun yet challenging journey!</span> <span>I know every single body is different, no matter what your goal is there will be a plan that works for you!</span></p>
       <div class="plans-box ">
         <div class="plans-item wow animate__animated animate__fadeInUp">
-          <div class="plans-item__wrap">
+          <div id="plan-1" class="plans-item__wrap">
             <h4 class="plans-item-title">meal plan</h4>
             <div class="plans-item-price">$100</div>
             <div class="plans-item-descr">
@@ -156,7 +151,7 @@
           </div>
         </div>
         <div class="plans-item wow animate__animated animate__fadeInUp">
-          <div class="plans-item__wrap">
+          <div id="plan-2" class="plans-item__wrap">
             <h4 class="plans-item-title">workout plan</h4>
             <div class="plans-item-price">$110</div>
             <div class="plans-item-descr">
@@ -167,7 +162,7 @@
           </div>
         </div>
         <div class="plans-item wow animate__animated animate__fadeInUp">
-          <div class="plans-item__wrap">
+          <div id="plan-3" class="plans-item__wrap">
             <h4 class="plans-item-title">4-weeks programm</h4>
             <div class="plans-item-price">$250</div>
             <div class="plans-item-descr">
@@ -179,7 +174,7 @@
           </div>
         </div>
         <div class="plans-item wow animate__animated animate__fadeInUp">
-          <div class="plans-item__wrap">
+          <div id="plan-4" class="plans-item__wrap">
             <h4 class="plans-item-title">12-weeks programm</h4>
             <div class="plans-item-price">$350</div>
             <div class="plans-item-descr">
@@ -260,9 +255,17 @@
 
   <div class="modal">
     <div class="modal__wrap">
+      <div class="modal-close">x</div>
       <div class="modal-title">Are you looking for <br> <span>In-Person Training?</span></div>
       <p class="modal-subtitle">Schedule a <span>free consultation</span> with me!</p>
       <form action="" class="modal-form">
+        <select name="select" class="modal-form-select" required>
+          <option value="" selected disabled>Choose plan</option>
+          <option value="meal plan">Meal plan</option>
+          <option value="workout plan">Workout plan</option>
+          <option value="4-weeks programm">4-weeks programm</option>
+          <option value="12-weeks programm">12-weeks programm</option>
+        </select>
         <input class="modal-form-input" type="text" placeholder="Name:" required>
         <input class="modal-form-input" type="text" placeholder="E-mail:" required>
         <button class="modal-form-btn" type="submit">Submit</button>

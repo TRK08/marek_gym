@@ -69,14 +69,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // MODAL WINDOW
-  const modal = document.querySelector('.modal'),
-    btns = document.querySelectorAll('.plans-item-btn');
+  let choosePlanName = '';
 
-  btns.forEach(btn => {
+  function toggleModal() {
+
+  const modal = document.querySelector('.modal'),
+    btn = document.querySelector('.plans-item-btn'),
+    closeModal = document.querySelector('.modal-close'),
+    selectOptions = document.querySelectorAll('.modal-form-select option');
+
     btn.addEventListener('click', () => {
       modal.classList.toggle('active');
       document.body.style.overflow = 'hidden';
+      selectOptions.forEach(item => {
+        if(item.value === choosePlanName) {
+          item.selected = true;
+        }
+      })
     })
+
+  closeModal.addEventListener('click', () => {
+    modal.classList.toggle('active');
+    document.body.style.overflow = 'auto';
   })
 
   modal.addEventListener('click', (e) => {
@@ -85,7 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = 'auto';
     }
   });
+}
 
+toggleModal();
 
   // FORM VALIDATE
   function formValidate(formClass, btnClass, inputs) {
@@ -116,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             inputsArr[i].required = false;
           }
         }
+        
         if (!inputsArr[0].required && !inputsArr[1].required) {
           btn.disabled = false;
           btn.style.opacity = 1;
@@ -134,6 +151,26 @@ document.addEventListener('DOMContentLoaded', () => {
   formValidate('.consultation-form', '.consultation-form-btn', '.consultation-form-input');
   formValidate('.modal-form', '.modal-form-btn', '.modal-form-input');
 
+
+  // CHOOSE PLAN
+
+  function choosePlan () {
+    const planItems = document.querySelectorAll('.plans-item__wrap');
+
+    planItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        for (let i = 0; i < planItems.length; i++) {
+          planItems[i].classList.remove('choose');
+          if (index === i) {
+            planItems[i].classList.add('choose');
+            choosePlanName = item.children[0].innerText.toLowerCase();
+          }
+        }
+      })
+    })
+  }
+
+  choosePlan();
 
 
 

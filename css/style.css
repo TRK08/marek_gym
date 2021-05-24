@@ -88,7 +88,8 @@ form input {
 }
 
 form button {
-  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  padding: 9px;
   background: #FFFFFF;
   border-radius: 20px;
   font-size: 30px;
@@ -239,6 +240,15 @@ form button {
   width: 100%;
   max-width: 720px;
   text-align: center;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  font-size: 40px;
+  cursor: pointer;
 }
 
 .modal-form-btn {
@@ -252,6 +262,19 @@ form button {
   font-weight: 900;
   color: #002E88;
   cursor: default;
+}
+
+.modal-form-select {
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 46, 136, 0.6);
+  background-color: transparent;
+  color: #fff;
+  padding: 0 10px 11px 10px; 
+}
+
+.modal-form-select:focus {
+  outline: none;
 }
 
 .modal-title {
@@ -354,9 +377,10 @@ form button {
   font-size: 20px;
   line-height: 30px;
   padding: 15px 27px 16px 27px;
-  color: #002E88;
+  color: #002E88!important;
   background-color: #fff;
   border-radius: 20px;
+  text-transform: uppercase;
   transition: all .3s ease-out;
 }
 
@@ -484,7 +508,7 @@ form button {
 }
 
 .neon-anim {
-  animation: neon 2s ease-in;
+  animation: neon 3s ease-in infinite;
 }
 
 @keyframes neon {
@@ -562,6 +586,12 @@ form button {
   margin-right: 20px;
   text-align: center;
   width: 100%;
+  cursor: pointer;
+}
+
+.plans-item__wrap.choose {
+  transform: scale(1.05);
+  transition: transform .5s ease;
 }
 
 .plans-item:last-child {
@@ -574,6 +604,7 @@ form button {
   padding: 45px 10px;
   margin-bottom: 50px;
   height: 95%;
+  transition: transform .5s ease;
 }
 
 .plans-item-title {
@@ -712,7 +743,7 @@ form button {
 }
 
 .consultation-form-title span {
-  background: linear-gradient(180deg, rgba(2, 198, 251, 0.871008) 67.18%, rgba(0, 198, 251, 0.87) 67.19%, #002E88 94.27%);
+  background: linear-gradient(90deg,rgba(26, 95, 228, 1), rgba(0, 198, 251, 1) 99%, rgba(255, 255, 255, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -723,6 +754,9 @@ form button {
 
 .consultation-form-btn {
   cursor: default;
+  max-width: 260px;
+  width: 100%;
+  align-self: center;
 }
 
 
@@ -821,6 +855,9 @@ form button {
   font-weight: 900;
   color: #AE922C;
   cursor: default;
+  width: 100%;
+  max-width: 165px;
+  align-self: center;
 }
 
 .footer-copyright {
@@ -1181,9 +1218,6 @@ form button {
   .plans-item {
     width: 100%;
     margin-bottom: 50px;
-  }
-
-  .plans-item__wrap {
     margin-bottom: 20px;
   }
 
@@ -1323,7 +1357,7 @@ form button {
   .modal-subtitle {
     font-size: 12px;
     line-height: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .modal-form {
