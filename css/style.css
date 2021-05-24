@@ -51,6 +51,7 @@ h1 {
   font-family: 'sequel black-85';
   font-size: 55px;
   line-height: 90px;
+
 }
 
 h2 {
@@ -240,14 +241,14 @@ form button {
   width: 100%;
   max-width: 720px;
   text-align: center;
-  position: relative;
 }
 
 .modal-close {
   position: absolute;
-  right: 60px;
-  top: 60px;
+  right: 40px;
+  top: 40px;
   font-size: 40px;
+  opacity: 0;
   cursor: pointer;
 }
 
@@ -271,6 +272,14 @@ form button {
   background-color: transparent;
   color: #fff;
   padding: 0 10px 11px 10px; 
+  -webkit-appearance: none;
+}
+
+.modal-form-select {
+  display: block;
+  background: url('../img/arrow-down.svg') no-repeat 98% 1px ;
+  background-size: 20px 20px;
+
 }
 
 .modal-form-select:focus {
@@ -355,11 +364,19 @@ form button {
   margin-bottom: 40px;
 }
 
-.hero-title span{
+.hero-title p{
   background: #fff;
   /* background: linear-gradient(90deg, #AE922C 0%, #C5AA66 100%); */
   -webkit-background-clip: text!important;
   -webkit-text-fill-color: transparent!important;
+  display: block;
+}
+
+.hero-title p span {
+  background-color: #fff!important;
+  -webkit-background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -589,7 +606,25 @@ form button {
   cursor: pointer;
 }
 
-.plans-item__wrap.choose {
+.plans-item__wrap::after{
+  content: '';
+  display: block;
+  background: url('../img/check.svg') no-repeat center;
+  background-size: 30px 30px;
+  height: 30px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 30px;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.plans-item__wrap.choose::after {
+  opacity: 1;
+}
+
+.plans-item__wrap:hover {
   transform: scale(1.05);
   transition: transform .5s ease;
 }
@@ -605,6 +640,7 @@ form button {
   margin-bottom: 50px;
   height: 95%;
   transition: transform .5s ease;
+  position: relative;
 }
 
 .plans-item-title {
@@ -1453,5 +1489,11 @@ form button {
 
 @media (max-width: 320px) {
 
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    min-height: 100vh;
+  }
 }
 

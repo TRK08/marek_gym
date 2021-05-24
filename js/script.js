@@ -78,15 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
     closeModal = document.querySelector('.modal-close'),
     selectOptions = document.querySelectorAll('.modal-form-select option');
 
-    btn.addEventListener('click', () => {
-      modal.classList.toggle('active');
-      document.body.style.overflow = 'hidden';
-      selectOptions.forEach(item => {
-        if(item.value === choosePlanName) {
-          item.selected = true;
-        }
-      })
+  let closeAnime = anime({
+    targets: '.modal-close',
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 1000,
+    delay: 800,
+  })
+
+  //choose plan to select
+  btn.addEventListener('click', () => {
+    modal.classList.toggle('active');
+    document.body.style.overflow = 'hidden';
+    closeAnime.play();
+    selectOptions.forEach(item => {
+      if(item.value === choosePlanName) {
+        item.selected = true;
+      }
     })
+  })
+
 
   closeModal.addEventListener('click', () => {
     modal.classList.toggle('active');
@@ -104,10 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
 toggleModal();
 
   // FORM VALIDATE
-  function formValidate(formClass, btnClass, inputs) {
+  function formValidate(formClass, btnClass, inputs, select) {
     const form = document.querySelector(formClass),
       btn = document.querySelector(btnClass),
-      inputsArr = document.querySelectorAll(inputs);
+      inputsArr = document.querySelectorAll(inputs),
+      formSelect = document.querySelector(select)
 
     form.addEventListener('submit', () => {
       form.reset();
@@ -183,7 +195,7 @@ toggleModal();
   })
 
   anime({
-    targets: '.hero-title span',
+    targets: '.hero-title p',
     background: ["linear-gradient(90deg, #AE922C 0%, #C5AA66 100%)"], opacity: [0, 1],
     easing: 'easeInOutSine',
     duration: 1600,
@@ -225,10 +237,10 @@ toggleModal();
       autoplay: false
     });
 
-    window.addEventListener('scroll', (e) => {
+    window.addEventListener('scroll', () => {
       title.seek(window.pageYOffset * 2.2);
     })
-    window.addEventListener('scroll', (e) => {
+    window.addEventListener('scroll', () => {
       subTitle.seek(window.pageYOffset * 1.7);
     })
   }
