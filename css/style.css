@@ -48,19 +48,19 @@ body {
 }
 
 h1 {
-  font-weight: bold;
-  font-size: 72px;
-  line-height: 108px;
+  font-family: 'sequel black-85';
+  font-size: 55px;
+  line-height: 90px;
 }
 
 h2 {
-  font-size: 96px;
-  line-height: 125px;
+  font-size: 70px;
+  line-height: 91px;
   font-weight: 700;
 }
 
 h2, h3 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'sequel black-85';
 }
 
 .container {
@@ -90,7 +90,6 @@ form input {
 form button {
   padding: 10px;
   background: #FFFFFF;
-  box-shadow: 13px 15px 20px -6px #1A5FE4;
   border-radius: 20px;
   font-size: 30px;
   line-height: 45px;
@@ -98,6 +97,110 @@ form button {
   font-weight: 900;
   color: #002E88;
 }
+
+/* PRELOADER */
+
+/* .preloader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: #020202;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s ease-out;
+}
+
+.preloader.close {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease-out;
+}
+
+.preloader-img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.small {
+  display: block;
+  width: 15px;
+  height: 55px;
+  border-radius: 5px 0 0 5px;
+  background-color: #AE922C;
+}
+
+.left-small {
+  animation: goldToWhite 3s ease infinite;
+}
+
+.right-small {
+  border-radius: 0 5px 5px 0;
+  animation-delay: 4s;
+  animation: goldToWhite 3s ease infinite;
+}
+
+.big {
+  display: block;
+  width: 20px;
+  height: 85px;
+  border-radius: 5px;
+  background-color: #fff;
+  
+}
+
+.left-big {
+  animation-delay: 1s;
+  animation: whiteToGold 3s ease infinite;
+}
+
+.right-big {
+  animation-delay: 3s;
+  animation: whiteToGold 3s ease infinite;
+}
+
+.center {
+  width: 80px;
+  height: 15px;
+  background-color: #AE922C;
+  animation-delay: 2s;
+  animation: goldToWhite 3s ease infinite;
+
+}
+
+@keyframes whiteToGold{
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #AE922C;
+  }
+  100% {
+    background-color: #fff;
+  }
+  
+}
+  @keyframes goldToWhite{
+    0% {
+      background-color: #AE922C;
+    }
+    50% {
+      background-color: #fff;
+    }
+    100% {
+      background-color: #AE922C;
+    }
+} */
 
 /* MODAL */
 
@@ -148,13 +251,15 @@ form button {
   text-transform: uppercase;
   font-weight: 900;
   color: #002E88;
+  cursor: default;
 }
 
 .modal-title {
   text-transform: uppercase;
-  font-size: 30px;
-  line-height: 45px;
+  font-size: 20px;
+  line-height: 32px;
   margin-bottom: 20px;
+  font-family: 'sequel black-85';
 }
 
 .modal-title span,
@@ -162,21 +267,22 @@ form button {
   background: linear-gradient(180deg, rgba(2, 198, 251, 0.871008) 67.18%, rgba(0, 198, 251, 0.87) 67.19%, #002E88 94.27%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Noto Sans', sans-serif;
 }
 
 .modal-subtitle {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 20px;
   margin-bottom: 70px;
   text-transform: uppercase;
+  font-family: 'sequel black-85';
 }
 
 /* HEADER */
 
 .header {
   padding: 27px 0;
-  background: linear-gradient(180deg, #002E88 22.3%, #00C6FB 191.89%);
+  background: linear-gradient(360deg, #030321 5.21%, #171492 66.15%, #2539ED 100%);
+  z-index: 11;
 }
 
 .header__wrap {
@@ -215,7 +321,6 @@ form button {
 
 .hero {
   /* background: url('../img/hero-bg.png') no-repeat 40px -75px; */
-
   background: url('../img/hero-bg.png') no-repeat center center;
   background-size: cover;
   color: #fff;
@@ -223,15 +328,15 @@ form button {
 }
 
 .hero-title {
-  max-width: 560px;
+  max-width: 610px;
   margin-bottom: 40px;
 }
 
 .hero-title span{
-  display: inline-block;
-  background: linear-gradient(90deg, #AE922C 0%, #C5AA66 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: #fff;
+  /* background: linear-gradient(90deg, #AE922C 0%, #C5AA66 100%); */
+  -webkit-background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
 }
 
 .hero-subtitle {
@@ -239,8 +344,8 @@ form button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 41px;
   margin-bottom: 40px;
 }
 
@@ -251,14 +356,12 @@ form button {
   padding: 15px 27px 16px 27px;
   color: #002E88;
   background-color: #fff;
-  box-shadow: 13px 15px 20px -6px #1A5FE4;
   border-radius: 20px;
   transition: all .3s ease-out;
 }
 
 .hero-btn:hover {
-  color: #ae922c;
-  box-shadow: 13px 15px 20px -6px #ae922c;
+  box-shadow: 13px 15px 20px -6px #1A5FE4;
   transition: all .3s ease-in;
 }
 
@@ -268,14 +371,15 @@ form button {
   padding: 100px 0;
 }
 
-.results-title,
-.results-subtitle {
-  font-size: 96px;
-  line-height: 144px;
+.results-title {
+  font-size: 50px;
+  line-height: 75px;
   margin-left: 150px;
 }
 
 .results-subtitle {
+  font-size: 75px;
+  line-height: 105px;
   margin-left: 250px;
   background: linear-gradient(90deg, #00C6FB 0%, #002E88 100%);
   -webkit-background-clip: text;
@@ -346,7 +450,7 @@ form button {
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
-  color: #002E88;
+  color: #AE922C;
 } 
 
 
@@ -366,6 +470,7 @@ form button {
   margin-left: 130px;
   color: #AE922C;
   z-index: 5;
+  margin-bottom: 40px;
 }
 
 .about__wrap {
@@ -420,22 +525,34 @@ form button {
 
 .plans {
   padding: 80px 0;
+  text-align: center;
 }
 
 .plans-title {
-  font-size: 60px;
-  line-height: 78px;
+  font-size: 45px;
+  line-height: 58px;
   color: #AE922C;
-  margin: 0 0 20px 100px;
+  margin: 0 0 20px 0;
 }
 
 .plans-descr {
   font-weight: 500; 
   font-size: 20px;
   line-height: 30px;
-  margin: 0 0 100px 100px;
-  max-width: 780px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  max-width: 610px;
 }
+
+.plans-descr span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.plans-descr span:last-child {
+  margin-bottom: 0;
+}
+
 
 .plans-box {
   display: flex;
@@ -456,7 +573,7 @@ form button {
   border-radius: 20px;
   padding: 45px 10px;
   margin-bottom: 50px;
-  height: 85%;
+  height: 95%;
 }
 
 .plans-item-title {
@@ -501,7 +618,6 @@ form button {
 }
 
 .plans-item-btn {
-  box-shadow: 13px 15px 20px -6px #1A5FE4;
   border-radius: 20px;
   padding: 15px 26px;
   color: #002E88;
@@ -513,21 +629,25 @@ form button {
   transition: all .3s ease-out;
 }
 
-.plans-item:nth-child(even) .plans-item-btn{
-  color: #AE922C;
-  box-shadow: 13px 15px 20px -6px #AE922C;
-}
-
-.plans-item:nth-child(even) .plans-item-btn:hover{
-  color: #002E88;
+.plans-item-btn:hover {
   box-shadow: 13px 15px 20px -6px #1A5FE4;
   transition: all .3s ease-in;
 }
 
-.plans-item:nth-child(odd) .plans-item-btn:hover{
-  color: #AE922C;
-  box-shadow: 13px 15px 20px -6px #AE922C;
-  transition: all .3s ease-in;
+.plans-item:first-child .plans-item__wrap {
+  background: linear-gradient(11.96deg, rgba(5, 1, 164, 0.18) 0%, rgba(5, 1, 164, 0.63) 35.94%, #376FFF 100%);
+}
+
+.plans-item:nth-child(2) .plans-item__wrap {
+  background: linear-gradient(11.96deg, rgba(1, 16, 148, 0.4) 0%, rgba(47, 12, 187, 0.72) 23.44%, rgba(82, 0, 255, 0.68) 47.4%, #0057FF 91.67%);
+}
+
+.plans-item:nth-child(3) .plans-item__wrap {
+  background: linear-gradient(11.96deg, rgba(71, 0, 162, 0.62) 0%, #4700A2 28.65%, #0029FF 100%);
+}
+
+.plans-item:last-child .plans-item__wrap {
+  background: linear-gradient(11.96deg, #CC20A6 0%, #000AFB 68.75%);
 }
 
 
@@ -545,8 +665,8 @@ form button {
 }
 
 .consultation-title {
-  font-size: 36px;
-  line-height: 54px;
+  font-size: 30px;
+  line-height: 45px;
   text-transform: uppercase;
   position: absolute;
   top: 35px;
@@ -587,6 +707,8 @@ form button {
   line-height: 36px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
 }
 
 .consultation-form-title span {
@@ -599,13 +721,17 @@ form button {
   width: 75%;
 }
 
+.consultation-form-btn {
+  cursor: default;
+}
+
 
 
 /* FOOTER */
 
 .footer {
   padding: 40px 0;
-  background: linear-gradient(180deg, #032669 22.3%, #002E88 68.23%, #00B6EF 166.28%, #00C6FB 191.89%);
+  background: linear-gradient(180deg, #030321 5.21%, #171492 66.15%, #2539ED 100%);
 }
 
 .footer-box {
@@ -621,16 +747,17 @@ form button {
 
 .footer-social-link {
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .footer-social-link a {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
 }
 
 .social-facebook {
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .footer-menu__wrap {
@@ -666,6 +793,7 @@ form button {
 }
 
 .footer-form-title {
+  font-family: 'Roboto' ,sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -692,6 +820,7 @@ form button {
   text-transform: uppercase;
   font-weight: 900;
   color: #AE922C;
+  cursor: default;
 }
 
 .footer-copyright {
@@ -716,9 +845,23 @@ form button {
   .swiper-button-prev {
     left: calc(50% - 200px);
   }
+
+  .results-subtitle {
+    font-size: 60px;
+    line-height: 75px;
+  }
 }
 
 @media (max-width: 991px) {
+
+
+  .results-title {
+    margin-left: 40px;
+  }
+
+  .results-subtitle {
+    margin-left: 75px;
+  }
 
   .swiper-slide img {
     width: 100%;
@@ -757,6 +900,7 @@ form button {
 
   .plans-item:last-child {
     margin-bottom: 0;
+    margin-right: auto;
   }
 
   .consultation-wrap {
@@ -812,6 +956,7 @@ form button {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
   }
 
   .header-burger span {
@@ -819,6 +964,7 @@ form button {
     width: 100%;
     height: 1px;
     background-color: #fff;
+    transition: all .5s ease-out;
   }
 
   .header-burger span:first-child {
@@ -831,10 +977,82 @@ form button {
     bottom: 0;
   }
 
+  .header-burger.active span:nth-child(2) {
+    width: 0;
+    transition: width .3s ease-out;
+  }
+
+  .header-burger.active span:first-child {
+    transform: rotate(45deg);
+    top: unset;
+    transition: all .5s ease;
+  }
+
+  .header-burger.active span:last-child {
+    transform: rotate(-45deg);
+    bottom: unset;
+    transition: all .5s ease;
+  }
+
+
+  .header-mobile-menu {
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #020202;
+    z-index: -1;
+    opacity: 0;
+    transition: slideMenuOpen .5s reverse;
+  }
+
+  .header-mobile-menu.open {
+    opacity: 1;
+    top: 65px;
+    animation: slideMenuOpen .5s ease-in;
+    z-index: 1;
+  }
+
+  @keyframes slideMenuOpen {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    10% {
+      top: 65px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .mobile-menu__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+  }
+
+  .mobile-menu-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .results .container {
+    padding: 0;
+  }
+
   .results-title, 
   .results-subtitle {
-    font-size: 48px;
-    line-height: 64px;
+    font-size: 31px;
+    line-height: 45px;
+    padding: 0 15px;
+  }
+
+  .results-subtitle {
+    margin-bottom: 50px;
   }
 
   .swiper-slide img {
@@ -845,6 +1063,13 @@ form button {
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+  }
+
+  .about-title {
+    font-size: 50px;
+    line-height: 61px;
+    margin-left: 0;
+    text-align: center;
   }
 
   .footer-box {
@@ -864,6 +1089,7 @@ form button {
 
   .footer-social-link {
     margin-bottom: 15px;
+    text-align: center;
   }
 
   .modal__wrap {
@@ -874,9 +1100,29 @@ form button {
     width: 75%;
     margin: 0 auto;
   }
+
+  .footer-form-title {
+    text-align: center;
+  }
 }
 
 @media (max-width: 672px) {
+
+  .hero {
+    background: url(../img/hero-bg.png) no-repeat 75% 200px;
+    background-size: 1000px;
+    padding: 50px 0 100px 0;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 350px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
   .results-title {
     margin-left: 25px;
   }
@@ -934,7 +1180,7 @@ form button {
 
   .plans-item {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .plans-item__wrap {
@@ -987,8 +1233,8 @@ form button {
   }
 
   h1 {
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 30px;
+    line-height: 46px;
   }
 
   h2 {
@@ -1004,8 +1250,8 @@ form button {
   }
 
   .hero-subtitle {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 20px;
+    line-height: 25px;
     margin-bottom: 350px;
   }
   
@@ -1015,8 +1261,8 @@ form button {
 
   .results-title,
   .results-subtitle {
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 25px;
+    line-height: 35px;
   }
 
   .results-subtitle {
@@ -1025,6 +1271,11 @@ form button {
 
   .about {
     background: url(../img/smoke.png) center -150px / cover no-repeat;
+  }
+
+  .about-title {
+    font-size: 35px;
+    line-height: 42px;
   }
 
   .about-img {
@@ -1040,13 +1291,18 @@ form button {
     line-height: 22px;
   }
 
+  .plans-title {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
   .consultation-img {
     max-height: 200px;
   }
 
   .consultation-title {
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 27px;
   }
 
   .consultation-form-title {
@@ -1081,14 +1337,26 @@ form button {
 }
 
 @media (max-width: 390px) {
+  .mobile-menu__wrap {
+    flex-direction: column;
+  }
+
+  .mobile-menu-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
   .hero {
     background: url(../img/hero-bg.png) no-repeat -220px 230px;
     background-size: 650px;
   }
 
-  .results-title,
-  .results-subtitle {
+  .results-title {
     margin-left: 0;
+  }
+
+  .results-subtitle {
+    margin-left: 20px;
   }
 
   .results-subtitle {
@@ -1106,6 +1374,8 @@ form button {
 
   .consultation-title {
     margin-right: auto;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .consultation-img {
@@ -1124,6 +1394,7 @@ form button {
     line-height: 18px;
   }
 
+
   .footer-box {
     align-items: flex-start;
   }
@@ -1139,8 +1410,14 @@ form button {
   .footer-social {
     flex-direction: column;
   }
+
+  .footer-copyright {
+    text-align: left;
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 320px) {
 
 }
+

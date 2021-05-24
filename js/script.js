@@ -42,32 +42,56 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  // PRELOADER
+
+  // document.body.onload = function () {
+  //   setTimeout(function () {
+  //     let preloader = document.querySelector('.preloader');
+  //     if (!preloader.classList.contains('close')) {
+  //       preloader.classList.add('close');
+  //     }
+  //   }, 100)
+  // }
+
+  // MOBILE MENU
+
+  const burger = document.querySelector('.header-burger'),
+        mobileMenu = document.querySelector('.header-mobile-menu')
+
+  function toggleMobileMenu () {
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      burger.classList.toggle('active');
+    })
+  }
+
+  toggleMobileMenu();
+
+
   // MODAL WINDOW
   const modal = document.querySelector('.modal'),
-        btns = document.querySelectorAll('.plans-item-btn');
+    btns = document.querySelectorAll('.plans-item-btn');
 
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       modal.classList.toggle('active');
       document.body.style.overflow = 'hidden';
-    })  
+    })
   })
-  
+
   modal.addEventListener('click', (e) => {
     if (e.target === modal || e.target.getAttribute('data-close') == '') {
       modal.classList.toggle('active');
       document.body.style.overflow = 'auto';
     }
-  });  
+  });
 
 
-  // FORM
-  // const form = document.querySelectorAll('form');
-
+  // FORM VALIDATE
   function formValidate(formClass, btnClass, inputs) {
     const form = document.querySelector(formClass),
-          btn = document.querySelector(btnClass),
-          inputsArr = document.querySelectorAll(inputs);
+      btn = document.querySelector(btnClass),
+      inputsArr = document.querySelectorAll(inputs);
 
     form.addEventListener('submit', () => {
       form.reset();
@@ -83,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
           inputsArr[i].required = true;
         }
         else {
-          if(inputsArr[i].classList.contains('footer-form-input')) {
+          if (inputsArr[i].classList.contains('footer-form-input')) {
             inputsArr[i].style.borderBottom = '1px solid #fff';
             inputsArr[i].required = false;
           }
@@ -91,53 +115,88 @@ document.addEventListener('DOMContentLoaded', () => {
             inputsArr[i].style.borderBottom = '2px solid rgba(0, 46, 136, 0.6)';
             inputsArr[i].required = false;
           }
-          
-          
-          
         }
-        if(!inputsArr[0].required && !inputsArr[1].required) {
+        if (!inputsArr[0].required && !inputsArr[1].required) {
           btn.disabled = false;
           btn.style.opacity = 1;
+          btn.style.cursor = 'pointer'
         }
         else {
           btn.disabled = true;
           btn.style.opacity = .7;
+          btn.style.cursor = 'default'
         }
       })
+    }
   }
-}
 
-    formValidate('.footer-form', '.footer-form-btn', '.footer-form-input');
-    formValidate('.consultation-form', '.consultation-form-btn', '.consultation-form-input');
-    formValidate('.modal-form', '.modal-form-btn', '.modal-form-input');
-
+  formValidate('.footer-form', '.footer-form-btn', '.footer-form-input');
+  formValidate('.consultation-form', '.consultation-form-btn', '.consultation-form-input');
+  formValidate('.modal-form', '.modal-form-btn', '.modal-form-input');
 
 
 
-  let title = anime({
-    targets: '.results-title',
-    translateX: [-100, 0],
+
+  anime({
+    targets: '.hero-title',
+    translateX: [-1000, 0],
     opacity: [0, 1],
+    duration: 1500,
     easing: 'easeInOutSine',
-    autoplay: false
-  });
-
-  let subTitle = anime({
-    targets: '.results-subtitle',
-    translateX: [-100, 0],
-    opacity: [0, 1],
-    easing: 'easeInOutSine',
-    autoplay: false
-  });
-  
-
-  window.addEventListener('scroll', (e) => {
-    title.seek(window.pageYOffset * 2.2);
-  })
-  window.addEventListener('scroll', (e) => {
-    subTitle.seek(window.pageYOffset * 1.7);
   })
 
-  
+  anime({
+    targets: '.hero-title span',
+    background: ["linear-gradient(90deg, #AE922C 0%, #C5AA66 100%)"], opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 1600,
+  })
+
+  anime({
+    targets: '.hero-subtitle',
+    translateX: [-1000, 0],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 1100,
+    delay: 500,
+  })
+
+  anime({
+    targets: '.hero-btn',
+    translateX: [-1000, 0],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 1600,
+  })
+
+  // console.log(document.documentElement.clientHeight);
+
+  if (document.documentElement.clientHeight < 850) {
+    let title = anime({
+      targets: '.results-title',
+      translateX: [-100, 0],
+      opacity: [0, 1],
+      easing: 'easeInOutSine',
+      autoplay: false
+    });
+
+    let subTitle = anime({
+      targets: '.results-subtitle',
+      translateX: [-100, 0],
+      opacity: [0, 1],
+      easing: 'easeInOutSine',
+      autoplay: false
+    });
+
+    window.addEventListener('scroll', (e) => {
+      title.seek(window.pageYOffset * 2.2);
+    })
+    window.addEventListener('scroll', (e) => {
+      subTitle.seek(window.pageYOffset * 1.7);
+    })
+  }
+
+
+
 
 });
