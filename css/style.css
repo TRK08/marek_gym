@@ -1203,6 +1203,7 @@ form button {
   }
   
   .footer-copyright-webink {
+    display: flex;
     justify-content: center;
     margin-bottom: 10px;
   }
