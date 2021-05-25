@@ -45,6 +45,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #020202;
   color: #fff;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -257,7 +258,6 @@ form button {
 .modal-form-btn {
   padding: 10px;
   background: #FFFFFF;
-  box-shadow: 13px 15px 20px -6px #1A5FE4;
   border-radius: 20px;
   font-size: 30px;
   line-height: 45px;
@@ -265,7 +265,17 @@ form button {
   font-weight: 900;
   color: #002E88;
   cursor: default;
+  max-width: 230px;
+  width: 100%;
+  margin: 0 auto;
+  transition: all .5s ease;
 }
+
+.modal-form-btn:hover {
+  box-shadow: 13px 15px 20px -6px #1A5FE4;
+  transition: all .5s ease;
+}
+
 
 .modal-form-select {
   margin-bottom: 40px;
@@ -431,7 +441,17 @@ form button {
 }
 
 .swiper-container {
-  padding: 0 15px;
+  padding: 0 15px 30px 15px;
+}
+
+.swiper-pagination-bullet {
+  opacity: .7;
+  background: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #AE922C;
+  opacity: 1;
 }
 
 .swiper-button-next {

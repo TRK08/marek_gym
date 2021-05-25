@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper-container', {
     effect: "coverflow",
     grabCursor: true,
+    autoplay: {
+      delay: 5000,
+    },
     loop: true,
     centeredSlides: true,
     slidesPerView: 3,
@@ -20,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       depth: 0,
       modifier: 1,
       slideShadows: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
     },
     navigation: {
       nextEl: '.swiper-button-next',
