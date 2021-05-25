@@ -833,6 +833,23 @@ form button {
   margin-right: 20px;
 }
 
+.footer-social-webink,
+.footer-copyright-webink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.footer-copyright-webink {
+  display: none;
+}
+
+.footer-social-webink img,
+.footer-copyright-webink img {
+  margin-right: 15px;
+}
+
 .footer-menu__wrap {
   display: flex;
   justify-content: center;
@@ -1180,6 +1197,15 @@ form button {
   .footer-form-title {
     text-align: center;
   }
+
+  .footer-social-webink {
+    display: none;
+  }
+  
+  .footer-copyright-webink {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 672px) {
@@ -1417,7 +1443,7 @@ form button {
 @media (max-width: 390px) {
   h1 {
     font-size: 25px;
-    line-height: 25px;
+    line-height: 40px;
   }
 
   .mobile-menu__wrap {
@@ -1510,6 +1536,10 @@ form button {
   .footer-copyright {
     text-align: left;
     margin-top: 30px;
+  }
+
+  .footer-copyright-webink {
+    justify-content: flex-start;
   }
 }
 
