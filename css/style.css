@@ -362,7 +362,7 @@ form button {
 }
 
 .hero-title {
-  max-width: 610px;
+  max-width: 640px;
   margin-bottom: 40px;
 }
 
@@ -378,7 +378,7 @@ form button {
   background-color: #fff!important;
   -webkit-background-clip: text!important;
   -webkit-text-fill-color: transparent!important;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .hero-subtitle {
@@ -696,6 +696,7 @@ form button {
   text-transform: uppercase;
   /* margin-bottom: 30px; */
   transition: all .3s ease-out;
+  background-color: #fff!important;
 }
 
 .plans-item-btn:hover {
