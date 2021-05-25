@@ -1415,6 +1415,11 @@ form button {
 }
 
 @media (max-width: 390px) {
+  h1 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
   .mobile-menu__wrap {
     flex-direction: column;
   }
