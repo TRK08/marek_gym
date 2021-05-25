@@ -250,6 +250,8 @@ form button {
   font-size: 40px;
   opacity: 0;
   cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .modal-form-btn {
@@ -615,7 +617,7 @@ form button {
   width: 100%;
   margin: 0 auto;
   position: absolute;
-  bottom: 30px;
+  bottom: 15px;
   opacity: 0;
   transition: all .5s ease;
 }
@@ -1364,6 +1366,11 @@ form button {
   .plans-title {
     font-size: 25px;
     line-height: 40px;
+    text-align: left;
+  }
+
+  .plans-descr {
+    text-align: left;
   }
 
   .consultation-img {
@@ -1414,6 +1421,19 @@ form button {
   .mobile-menu-item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 25px;
+  }
+
+  .modal-title {
+    font-size: 14px;
+  }
+
+  .modal-subtitle {
+    font-size: 12px;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 25px;
   }
 
   .hero {
@@ -1488,7 +1508,10 @@ form button {
 }
 
 @media (max-width: 320px) {
-
+  .hero-btn {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 @media (min-width: 1440px) {
