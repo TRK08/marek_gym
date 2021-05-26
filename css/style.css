@@ -665,6 +665,10 @@ form button {
   position: relative;
 }
 
+.plans-item:nth-child(even) .plans-item__wrap {
+  background: linear-gradient(90deg, #002E88 0%, #00C6FB 100%);
+}
+
 .plans-item-title {
   font-size: 24px;
   line-height: 36px;
@@ -724,21 +728,7 @@ form button {
   transition: all .3s ease-in;
 }
 
-.plans-item:first-child .plans-item__wrap {
-  background: linear-gradient(11.96deg, rgba(5, 1, 164, 0.18) 0%, rgba(5, 1, 164, 0.63) 35.94%, #376FFF 100%);
-}
 
-.plans-item:nth-child(2) .plans-item__wrap {
-  background: linear-gradient(11.96deg, rgba(1, 16, 148, 0.4) 0%, rgba(47, 12, 187, 0.72) 23.44%, rgba(82, 0, 255, 0.68) 47.4%, #0057FF 91.67%);
-}
-
-.plans-item:nth-child(3) .plans-item__wrap {
-  background: linear-gradient(11.96deg, rgba(71, 0, 162, 0.62) 0%, #4700A2 28.65%, #0029FF 100%);
-}
-
-.plans-item:last-child .plans-item__wrap {
-  background: linear-gradient(11.96deg, #CC20A6 0%, #000AFB 68.75%);
-}
 
 
 /* CONSULTATION */
